@@ -1,3 +1,5 @@
+import random
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,6 +20,10 @@ app.add_middleware(
 @app.get("/health")
 def health_check():
     return {"status": "ok", "message": "Backend is healthy"}
+
+@app.get("/random-number")
+def get_random_number():
+    return {"number": random.randint(0, 9)}
 
 @app.get("/")
 def read_root():
