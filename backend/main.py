@@ -8,7 +8,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://cicd-test-wheat.vercel.app/"
+        "https://cicd-test-wheat.vercel.app"
     ],  # Allow specific origins
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
